@@ -130,7 +130,8 @@ def guess_eval(guess_word, correct_word):
                 correct_word_chars.update({guess_word[i]: correct_word_chars.get(guess_word[i]) - 1})
         elif guess_word[i] in correct_word and guess_word[i] in correct_word_chars.keys():
             word_check[i] = 'O'
-            correct_word_chars.update({guess_word[i]: correct_word_chars.get(guess_word[i]) - 1})
+            if (correct_word_chars.get(guess_word[i]) > 0):
+                correct_word_chars.update({guess_word[i]: correct_word_chars.get(guess_word[i]) - 1})
     return ''.join(word_check)
 
 def finish_game(num_guesses, guessed, correct_word):
