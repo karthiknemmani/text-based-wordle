@@ -140,7 +140,7 @@ def finish_game(num_guesses, guessed, correct_word):
         elif num_guesses == 2:
             print('Magnificent!')
         elif num_guesses == 3:
-            print('')
+            print('Impressive!')
         elif num_guesses == 4:
             print('Splendid!')
         elif num_guesses == 5:
