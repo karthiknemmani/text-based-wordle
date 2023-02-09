@@ -1,0 +1,520 @@
+******************************************************************
+Welcome to Wordle.
+
+Enter y for instructions, anything else to skip: n
+
+Enter y to set the random seed, anything else to skip: y
+
+Enter number for initial seed: 12345
+
+Enter your guess. A 5 letter word: SALES
+
+GO-O-
+SALES
+
+Unused letters: B C D F G H I J K M N O P Q R T U V W X Y Z
+
+Enter your guess. A 5 letter word: SHALL
+
+GO-O-
+SALES
+GGG--
+SHALL
+
+Unused letters: B C D F G I J K M N O P Q R T U V W X Y Z
+
+Enter your guess. A 5 letter word: SHARP
+
+GO-O-
+SALES
+GGG--
+SHALL
+GGG-O
+SHARP
+
+Unused letters: B C D F G I J K M N O Q T U V W X Y Z
+
+Enter your guess. A 5 letter word: SHARD
+
+GO-O-
+SALES
+GGG--
+SHALL
+GGG-O
+SHARP
+GGG--
+SHARD
+
+Unused letters: B C F G I J K M N O Q T U V W X Y Z
+
+Enter your guess. A 5 letter word: SHAPE
+
+GO-O-
+SALES
+GGG--
+SHALL
+GGG-O
+SHARP
+GGG--
+SHARD
+GGGGG
+SHAPE
+
+Unused letters: B C F G I J K M N O Q T U V W X Y Z
+
+You win. Great!
+
+Do you want to play again? Type Y for yes: y
+
+Enter your guess. A 5 letter word: ANGER
+
+G-OGO
+ANGER
+
+Unused letters: B C D F H I J K L M O P Q S T U V W X Y Z
+
+Enter your guess. A 5 letter word: AGREE
+
+G-OGO
+ANGER
+GGGGG
+AGREE
+
+Unused letters: B C D F H I J K L M O P Q S T U V W X Y Z
+
+You win. Magnificent!
+
+Do you want to play again? Type Y for yes: y
+
+Enter your guess. A 5 letter word: STARE
+
+-O-GO
+STARE
+
+Unused letters: B C D F G H I J K L M N O P Q U V W X Y Z
+
+Enter your guess. A 5 letter word: WOUND
+
+-O-GO
+STARE
+-O---
+WOUND
+
+Unused letters: B C F G H I J K L M P Q V X Y Z
+
+Enter your guess. A 5 letter word: FLICK
+
+-O-GO
+STARE
+-O---
+WOUND
+-----
+FLICK
+
+Unused letters: B G H J M P Q V X Y Z
+
+Enter your guess. A 5 letter word: SPORT
+
+-O-GO
+STARE
+-O---
+WOUND
+-----
+FLICK
+--OGO
+SPORT
+
+Unused letters: B G H J M Q V X Y Z
+
+Enter your guess. A 5 letter word: TERRO
+
+TERRO is not a valid word. Please try again.
+
+Enter your guess. A 5 letter word: TERROS
+
+TERROS is not a valid word. Please try again.
+
+Enter your guess. A 5 letter word: TERRA
+
+-O-GO
+STARE
+-O---
+WOUND
+-----
+FLICK
+--OGO
+SPORT
+OG-G-
+TERRA
+
+Unused letters: B G H J M Q V X Y Z
+
+Enter your guess. A 5 letter word: metro
+
+-O-GO
+STARE
+-O---
+WOUND
+-----
+FLICK
+--OGO
+SPORT
+OG-G-
+TERRA
+GGGGG
+METRO
+
+Unused letters: B G H J Q V X Y Z
+
+You win. Phew!
+
+Do you want to play again? Type Y for yes: n
+
+******************************************************************
+Welcome to Wordle.
+
+Enter y for instructions, anything else to skip: y
+
+You have 6 chances to guess the secret 5 letter word.
+Enter a valid 5 letter word.
+Feedback is given for each letter.
+G indicates the letter is in the word and in the correct spot.
+O indicates the letter is in the word but not that spot.
+- indicates the letter is not in the word.
+
+Enter y to set the random seed, anything else to skip: y
+
+Enter number for initial seed: 125
+
+Enter your guess. A 5 letter word: STARE
+
+O---G
+STARE
+
+Unused letters: B C D F G H I J K L M N O P Q U V W X Y Z
+
+Enter your guess. A 5 letter word: WOUND
+
+O---G
+STARE
+-GG--
+WOUND
+
+Unused letters: B C F G H I J K L M P Q V X Y Z
+
+Enter your guess. A 5 letter word: flick
+
+O---G
+STARE
+-GG--
+WOUND
+-----
+FLICK
+
+Unused letters: B G H J M P Q V X Y Z
+
+Enter your guess. A 5 letter word: pounc
+
+POUNC is not a valid word. Please try again.
+
+Enter your guess. A 5 letter word: pound
+
+O---G
+STARE
+-GG--
+WOUND
+-----
+FLICK
+-GG--
+POUND
+
+Unused letters: B G H J M Q V X Y Z
+
+Enter your guess. A 5 letter word: House
+
+O---G
+STARE
+-GG--
+WOUND
+-----
+FLICK
+-GG--
+POUND
+GGGGG
+HOUSE
+
+Unused letters: B G J M Q V X Y Z
+
+You win. Great!
+
+Do you want to play again? Type Y for yes: n
+
+******************************************************************
+Welcome to Wordle.
+
+Enter y for instructions, anything else to skip: n
+
+Enter y to set the random seed, anything else to skip: y
+
+Enter number for initial seed: 125
+
+Enter your guess. A 5 letter word: HOUSE
+
+GGGGG
+HOUSE
+
+Unused letters: A B C D F G I J K L M N P Q R T V W X Y Z
+
+You win. Genius!
+
+Do you want to play again? Type Y for yes: y
+
+Enter your guess. A 5 letter word: GRANT
+
+GG---
+GRANT
+
+Unused letters: B C D E F H I J K L M O P Q S U V W X Y Z
+
+Enter your guess. A 5 letter word: GRIMY
+
+GG---
+GRANT
+GGGGG
+GRIMY
+
+Unused letters: B C D E F H J K L O P Q S U V W X Z
+
+You win. Magnificent!
+
+Do you want to play again? Type Y for yes: n
+
+******************************************************************
+Welcome to Wordle.
+
+Enter y for instructions, anything else to skip: n
+
+Enter y to set the random seed, anything else to skip: y
+
+Enter number for initial seed: 1212
+
+Enter your guess. A 5 letter word: STALE
+
+---O-
+STALE
+
+Unused letters: B C D F G H I J K M N O P Q R U V W X Y Z
+
+Enter your guess. A 5 letter word: FLOCK
+
+---O-
+STALE
+-O--O
+FLOCK
+
+Unused letters: B D G H I J M N P Q R U V W X Y Z
+
+Enter your guess. A 5 letter word: MILKY
+
+---O-
+STALE
+-O--O
+FLOCK
+GGGGG
+MILKY
+
+Unused letters: B D G H J N P Q R U V W X Z
+
+You win. Impressive!
+
+Do you want to play again? Type Y for yes: y
+
+Enter your guess. A 5 letter word: STARE
+
+--O--
+STARE
+
+Unused letters: B C D F G H I J K L M N O P Q U V W X Y Z
+
+Enter your guess. A 5 letter word: WHACK
+
+--O--
+STARE
+--OO-
+WHACK
+
+Unused letters: B D F G I J L M N O P Q U V X Y Z
+
+Enter your guess. A 5 letter word: COMMA
+
+--O--
+STARE
+--OO-
+WHACK
+O-O-O
+COMMA
+
+Unused letters: B D F G I J L N P Q U V X Y Z
+
+Enter your guess. A 5 letter word: MAGIC
+
+--O--
+STARE
+--OO-
+WHACK
+O-O-O
+COMMA
+GGGGG
+MAGIC
+
+Unused letters: B D F J L N P Q U V X Y Z
+
+You win. Splendid!
+
+Do you want to play again? Type Y for yes: n
+
+******************************************************************
+Welcome to Wordle.
+
+Enter y for instructions, anything else to skip: no
+
+Enter y to set the random seed, anything else to skip: y
+
+Enter number for initial seed: 1202012
+
+Enter your guess. A 5 letter word: AUDIO
+
+OO---
+AUDIO
+
+Unused letters: B C E F G H J K L M N P Q R S T V W X Y Z
+
+Enter your guess. A 5 letter word: quart
+
+OO---
+AUDIO
+-OO--
+QUART
+
+Unused letters: B C E F G H J K L M N P S V W X Y Z
+
+Enter your guess. A 5 letter word: mauve
+
+OO---
+AUDIO
+-OO--
+QUART
+-GG-G
+MAUVE
+
+Unused letters: B C F G H J K L N P S W X Y Z
+
+Enter your guess. A 5 letter word: sauce
+
+OO---
+AUDIO
+-OO--
+QUART
+-GG-G
+MAUVE
+-GG-G
+SAUCE
+
+Unused letters: B F G H J K L N P W X Y Z
+
+Enter your guess. A 5 letter word: gauze
+
+OO---
+AUDIO
+-OO--
+QUART
+-GG-G
+MAUVE
+-GG-G
+SAUCE
+GGGGG
+GAUZE
+
+Unused letters: B F H J K L N P W X Y
+
+You win. Great!
+
+Do you want to play again? Type Y for yes: y
+
+Enter your guess. A 5 letter word: spare
+
+--G--
+SPARE
+
+Unused letters: B C D F G H I J K L M N O Q T U V W X Y Z
+
+Enter your guess. A 5 letter word: wound
+
+--G--
+SPARE
+---G-
+WOUND
+
+Unused letters: B C F G H I J K L M Q T V X Y Z
+
+Enter your guess. A 5 letter word: clank
+
+--G--
+SPARE
+---G-
+WOUND
+-GGGG
+CLANK
+
+Unused letters: B F G H I J M Q T V X Y Z
+
+Enter your guess. A 5 letter word: blank
+
+--G--
+SPARE
+---G-
+WOUND
+-GGGG
+CLANK
+-GGGG
+BLANK
+
+Unused letters: F G H I J M Q T V X Y Z
+
+Enter your guess. A 5 letter word: plank
+
+--G--
+SPARE
+---G-
+WOUND
+-GGGG
+CLANK
+-GGGG
+BLANK
+-GGGG
+PLANK
+
+Unused letters: F G H I J M Q T V X Y Z
+
+Enter your guess. A 5 letter word: flank
+
+--G--
+SPARE
+---G-
+WOUND
+-GGGG
+CLANK
+-GGGG
+BLANK
+-GGGG
+PLANK
+GGGGG
+FLANK
+
+Unused letters: G H I J M Q T V X Y Z
+
+You win. Phew!
+
+Do you want to play again? Type Y for yes: n
+
+******************************************************************
