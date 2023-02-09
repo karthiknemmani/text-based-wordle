@@ -85,23 +85,21 @@ def play_wordle(secret_words, all_words):
             guess_word = guess_word.upper()
             # check if word is valid
             if guess_word in all_words:
-                if guess_word == correct_word:
-                    pattern = 'GGGGG'
-                    guessed = True
-                else:
-                    guesses.append(guess_word)
-                    accuracy = guess_eval(guess_word, correct_word)
-                    guess_accuracies.append((accuracy, guess_word))
-                    for guess in guess_accuracies:
-                        print(guess[0])
-                        print(guess[1])
-                    for letter in guess_word:
-                        alphabets.remove(letter) if letter in alphabets else None
-                    print('\nUnused letters:',end='')
-                    for alph in alphabets:
-                        print(f' {alph}', end='')
-                    print()
+                guesses.append(guess_word)
+                accuracy = guess_eval(guess_word, correct_word)
+                guess_accuracies.append((accuracy, guess_word))
+                for guess in guess_accuracies:
+                    print(guess[0])
+                    print(guess[1])
+                for letter in guess_word:
+                    alphabets.remove(letter) if letter in alphabets else None
+                print('\nUnused letters:',end='')
+                for alph in alphabets:
+                    print(f' {alph}', end='')
+                print()
                 num_guesses += 1
+                if guess_word == correct_word:
+                    guessed = True;
             else:
                 print(f'{guess_word} is not a valid word. Please try again.')
         play = finish_game(num_guesses, guessed, correct_word)
@@ -136,7 +134,7 @@ def guess_eval(guess_word, correct_word):
 
 def finish_game(num_guesses, guessed, correct_word):
     if guessed:
-        print('You win.', end=' ')
+        print('\nYou win.', end=' ')
         if num_guesses == 1:
             print('Genius!')
         elif num_guesses == 2:
