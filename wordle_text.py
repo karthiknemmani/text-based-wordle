@@ -90,7 +90,6 @@ def play_wordle(secret_words, all_words):
                     guessed = True
                 else:
                     guesses.append(guess_word)
-                    num_guesses += 1
                     accuracy = guess_eval(guess_word, correct_word)
                     guess_accuracies.append((accuracy, guess_word))
                     for guess in guess_accuracies:
@@ -102,6 +101,7 @@ def play_wordle(secret_words, all_words):
                     for alph in alphabets:
                         print(f' {alph}', end='')
                     print()
+                num_guesses += 1
             else:
                 print(f'{guess_word} is not a valid word. Please try again.')
         play = finish_game(num_guesses, guessed, correct_word)
@@ -129,9 +129,9 @@ def guess_eval(guess_word, correct_word):
             else:
                 correct_word_chars.update({guess_word[i]: correct_word_chars.get(guess_word[i]) - 1})
         elif guess_word[i] in correct_word and guess_word[i] in correct_word_chars.keys():
-            word_check[i] = 'O'
             if (correct_word_chars.get(guess_word[i]) > 0):
                 correct_word_chars.update({guess_word[i]: correct_word_chars.get(guess_word[i]) - 1})
+                word_check[i] = 'O'
     return ''.join(word_check)
 
 def finish_game(num_guesses, guessed, correct_word):
