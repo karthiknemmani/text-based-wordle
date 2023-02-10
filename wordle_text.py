@@ -6,8 +6,6 @@
 # and I have not provided this code to any other student.
 
 import random
-import string
-
 
 def main():
     """ Plays a text based version of Wordle.
@@ -38,8 +36,7 @@ def welcome_and_instructions():
         print('G indicates the letter is in the word and in the correct spot.')
         print('O indicates the letter is in the word but not that spot.')
         print('- indicates the letter is not in the word.')
-    set_seed = input(
-        '\nEnter y to set the random seed, anything else to skip: ')
+    set_seed = input('\nEnter y to set the random seed, anything else to skip: ')
     if set_seed == 'y':
         random.seed(int(input('\nEnter number for initial seed: ')))
 
@@ -71,6 +68,7 @@ def get_words():
     return secret_words, all_words
 
 def play_wordle(secret_words, all_words):
+    """Acts as the game text interface and plays until user decides not to"""
     play = True
     while play:
         correct_word = random.choice(secret_words)
@@ -99,7 +97,7 @@ def play_wordle(secret_words, all_words):
                 print()
                 num_guesses += 1
                 if guess_word == correct_word:
-                    guessed = True;
+                    guessed = True
             else:
                 print(f'{guess_word} is not a valid word. Please try again.')
         play = finish_game(num_guesses, guessed, correct_word)
@@ -107,6 +105,8 @@ def play_wordle(secret_words, all_words):
             
 
 def create_word_dict(correct_word):
+    """Creates a dictionary of the letters in the correct word to 
+    evaluate guess"""
     word_chars = {}
     for c in correct_word:
         if c in word_chars.keys():
@@ -116,23 +116,28 @@ def create_word_dict(correct_word):
     return word_chars
 
 def guess_eval(guess_word, correct_word):
-    """ evaluates pattern when false """
+    """ Evaluates a guess given the guess and the correct word """
     word_check = ['-', '-', '-', '-', '-'] # check which letters are correct
-    correct_word_chars = create_word_dict(correct_word) # recreate word dict every guess
+    correct_word_chars = create_word_dict(correct_word)
     for i in range(len(guess_word)):
         if guess_word[i] == correct_word[i]:
             word_check[i] = 'G'
             if correct_word_chars.get(guess_word[i]) == 1:
                 del correct_word_chars[guess_word[i]]
             else:
-                correct_word_chars.update({guess_word[i]: correct_word_chars.get(guess_word[i]) - 1})
-        elif guess_word[i] in correct_word and guess_word[i] in correct_word_chars.keys():
+                correct_word_chars.update({guess_word[i]: 
+                    correct_word_chars.get(guess_word[i]) - 1})
+        elif (guess_word[i] in correct_word) and (
+            guess_word[i] in correct_word_chars.keys()):
             if (correct_word_chars.get(guess_word[i]) > 0):
-                correct_word_chars.update({guess_word[i]: correct_word_chars.get(guess_word[i]) - 1})
+                correct_word_chars.update({guess_word[i]: 
+                    correct_word_chars.get(guess_word[i]) - 1})
                 word_check[i] = 'O'
     return ''.join(word_check)
 
 def finish_game(num_guesses, guessed, correct_word):
+    """Given whether the word was guessed or not (and if so, 
+    how many guesses), this provides proper end-of-game output"""
     if guessed:
         print('\nYou win.', end=' ')
         if num_guesses == 1:
@@ -146,15 +151,13 @@ def finish_game(num_guesses, guessed, correct_word):
         elif num_guesses == 5:
             print('Great!')
         elif num_guesses == 6:
-            print("Phew!")
+            print('Phew!')
     else:
         print(f'\nNot quite. The secret word was {correct_word}.')
-    play_again = input('\nDo you want to play again? Type Y for yes: ').upper()
+    play_again = input(
+        '\nDo you want to play again? Type Y for yes: ').upper()
     return True if play_again == 'Y' else False
     
-    
-        
-        
 
 if __name__ == '__main__':
     main()
