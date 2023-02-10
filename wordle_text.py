@@ -6,6 +6,7 @@
 # and I have not provided this code to any other student.
 
 import random
+import string
 
 def main():
     """ Plays a text based version of Wordle.
@@ -86,15 +87,7 @@ def play_wordle(secret_words, all_words):
                 guesses.append(guess_word)
                 accuracy = guess_eval(guess_word, correct_word)
                 guess_accuracies.append((accuracy, guess_word))
-                for guess in guess_accuracies:
-                    print(guess[0])
-                    print(guess[1])
-                for letter in guess_word:
-                    alphabets.remove(letter) if letter in alphabets else None
-                print('\nUnused letters:',end='')
-                for alph in alphabets:
-                    print(f' {alph}', end='')
-                print()
+                guess_output(guess_word, guess_accuracies, alphabets)
                 num_guesses += 1
                 if guess_word == correct_word:
                     guessed = True
@@ -102,7 +95,17 @@ def play_wordle(secret_words, all_words):
                 print(f'{guess_word} is not a valid word. Please try again.')
         play = finish_game(num_guesses, guessed, correct_word)
     
-            
+def guess_output(guess_word, guess_accuracies, alphabets):
+    for guess in guess_accuracies:
+        print(guess[0])
+        print(guess[1])
+    for letter in guess_word:
+        alphabets.remove(letter) if letter in alphabets else None
+    print('\nUnused letters:',end='')
+    for alph in alphabets:
+        print(f' {alph}', end='')
+    print()
+        
 
 def create_word_dict(correct_word):
     """Creates a dictionary of the letters in the correct word to 
